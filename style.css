@@ -4,6 +4,7 @@
 ===========================*/
 :root {
   --font-family: "Inter", sans-serif;
+  --font-family2: "Noto Sans", sans-serif;
   --primary: #00464a;
   --primary-dark: #003336;
   --primary-light: #009199;
@@ -1138,8 +1139,7 @@ p {
   about-05 css
 ===========================*/
 .about-five {
-  background-color: var(--light-3);
-  padding-top: 120px;
+  padding-top: 2rem;
   padding-bottom: 90px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1311,7 +1311,7 @@ p {
   max-width: 480px;
 }
 .why_we .right_site p {
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--font-family2);
   font-size: 1.4rem;
   color: white;
 }
@@ -1322,8 +1322,27 @@ p {
 }
 
 /*===========================
+  slickslider css 
+===========================*/
+.myslider {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 3rem;
+}
+.myslider .card_item {
+  display: flex;
+  justify-content: center;
+}
+
+/*===========================
   ingredients css 
 ===========================*/
+.ingredients {
+  font-family: var(--font-family2);
+}
+.ingredients h4 {
+  font-size: 2rem;
+}
 .ingredients_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1741,8 +1760,8 @@ p {
     Brand CSS
 ========================================*/
 .brand-area {
-  padding: 100px 0;
-  background: var(--light-3);
+  padding: 50px 0;
+  background: #eeeeee;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .brand-area {
@@ -1787,178 +1806,69 @@ p {
   cursor: pointer;
 }
 
-/* ===== Buttons Css ===== */
-.contact-form-wrapper .contact-form .primary-btn {
-  background: var(--primary);
-  color: var(--white);
-  box-shadow: var(--shadow-2);
-}
-.contact-form-wrapper .contact-form .active.primary-btn,
-.contact-form-wrapper .contact-form .primary-btn:hover,
-.contact-form-wrapper .contact-form .primary-btn:focus {
+/* Opinion css */
+.opition{
   background: var(--primary-dark);
-  color: var(--white);
-  box-shadow: var(--shadow-4);
+  padding: 5rem 0;
 }
-.contact-form-wrapper .contact-form .deactive.primary-btn {
-  background: var(--gray-4);
-  color: var(--dark-3);
-  pointer-events: none;
+.opition_slider{
+  width: 750px;
+  margin: auto;
 }
-
-/*======================================
-	Contact CSS
-========================================*/
-.contact-section {
-  position: relative;
-  z-index: 3;
-  padding-top: 100px;
+.opition_slider .slick-prev{
+  left: -200px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .contact-section {
-    padding-top: 80px;
-  }
+.opition_slider .slick-prev::before{
+content: "◀";
 }
-@media (max-width: 767px) {
-  .contact-section {
-    padding-top: 60px;
-  }
+.opition_slider .slick-next{
+  right: -200px;
 }
-.contact-section .contact-item-wrapper .contact-item {
-  display: flex;
-  border: 1px solid var(--gray-4);
-  border-radius: 10px;
-  background: var(--white);
-  margin-bottom: 30px;
-  padding: 20px 30px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+.opition_slider .slick-next::before{
+content: "▶";
 }
-.contact-section .contact-item-wrapper .contact-item:hover {
-  box-shadow: var(--shadow-4);
+.opition_slider button{
+  width: 100px;
+  height: 100px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .contact-section .contact-item-wrapper .contact-item {
-    padding: 20px;
-  }
+.opition_slider button::before{
+  font-size: 120px;
+  opacity: .5;
+  line-height: 0;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .contact-section .contact-item-wrapper .contact-item {
-    flex-direction: column;
-  }
-}
-@media (max-width: 767px) {
-  .contact-section .contact-item-wrapper .contact-item {
-    flex-direction: column;
-  }
-}
-.contact-section .contact-item-wrapper .contact-item .contact-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--white);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.contact-section .contact-item-wrapper .contact-item .contact-content {
-  margin-left: 25px;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 20px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 0px;
-    margin-top: 20px;
-  }
-}
-@media (max-width: 767px) {
-  .contact-section .contact-item-wrapper .contact-item .contact-content {
-    margin-left: 0px;
-    margin-top: 20px;
-  }
-}
-.contact-section .contact-item-wrapper .contact-item .contact-content h4 {
-  font-size: 20px;
-  color: var(--primary);
-  margin-bottom: 10px;
+.opition_slider h5{
+  font-size: 1.8rem;
+  color: white;
+  padding-top: 2.7rem;
 }
 
-.contact-form-wrapper {
-  padding: 50px 40px;
-  background: var(--white);
-  border: 1px solid var(--gray-4);
-  margin-left: 0px;
-  border-radius: 10px;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+.opition_card span {
+  font-size: 1rem;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: #f9e906;
+  padding-bottom: 1.7rem;
 }
-.contact-form-wrapper:hover {
-  box-shadow: var(--shadow-4);
+.opition_card span embed {
+  width: 80px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .contact-form-wrapper {
-    margin-left: 30px;
-  }
+.opition_card p {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
-.contact-form-wrapper .section-title {
-  margin-bottom: 30px;
+.opition_card p span {
+  font-size: 30px;
+  color: white;
+  line-height: 0;
+  margin: 0 10px;
 }
-.contact-form-wrapper .section-title span {
-  font-size: 20px;
-  color: var(--primary);
-  font-weight: 700;
-}
-.contact-form-wrapper .section-title h2 {
-  margin-bottom: 10px;
-}
-.contact-form-wrapper .section-title p {
-  color: var(--dark-3);
-}
-.contact-form-wrapper .contact-form input,
-.contact-form-wrapper .contact-form textarea {
-  padding: 15px 25px;
-  border-radius: 30px;
-  border: 1px solid var(--gray-4);
-  margin-bottom: 25px;
-  width: 100%;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-@media (max-width: 767px) {
-  .contact-form-wrapper .contact-form input,
-  .contact-form-wrapper .contact-form textarea {
-    padding: 12px 25px;
-  }
-}
-.contact-form-wrapper .contact-form input:focus,
-.contact-form-wrapper .contact-form textarea:focus {
-  border-color: var(--primary);
-}
-.contact-form-wrapper .contact-form textarea {
-  border-radius: 18px;
-}
-.map-style-9 {
-  margin-top: -130px;
+.opition_card .name {
+ font-size: .9rem;
+font-weight: 300;
+letter-spacing: 1.3px;
 }
 
 /* Footer eleven css */
