@@ -401,7 +401,7 @@ p {
 
 /*===== NAVBAR NINE =====*/
 .navbar-area.navbar-nine {
-  background: var(--primary);
+  background: rgba(0, 56, 59, 0.9);
   padding: 10px 0;
   position: absolute;
   left: 0;
@@ -518,6 +518,7 @@ p {
 }
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a:hover {
   opacity: 1;
+  color: var(--caution);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px),
   (max-width: 767px) {
@@ -531,6 +532,7 @@ p {
 }
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a.active {
   opacity: 1;
+  color: var(--caution);
 }
 .navbar-area.navbar-nine .navbar .navbar-nav .nav-item a i {
   font-size: 12px;
@@ -1806,37 +1808,42 @@ p {
   cursor: pointer;
 }
 
+/* modeyback css */
+.modeyback h3 {
+  color: var(--primary);
+}
+
 /* Opinion css */
-.opition{
+.opition {
   background: var(--primary-dark);
   padding: 5rem 0;
 }
-.opition_slider{
+.opition_slider {
   width: 750px;
   margin: auto;
 }
-.opition_slider .slick-prev{
+.opition_slider .slick-prev {
   left: -200px;
 }
-.opition_slider .slick-prev::before{
-content: "◀";
+.opition_slider .slick-prev::before {
+  content: "◀";
 }
-.opition_slider .slick-next{
+.opition_slider .slick-next {
   right: -200px;
 }
-.opition_slider .slick-next::before{
-content: "▶";
+.opition_slider .slick-next::before {
+  content: "▶";
 }
-.opition_slider button{
+.opition_slider button {
   width: 100px;
   height: 100px;
 }
-.opition_slider button::before{
+.opition_slider button::before {
   font-size: 120px;
-  opacity: .5;
+  opacity: 0.5;
   line-height: 0;
 }
-.opition_slider h5{
+.opition_slider h5 {
   font-size: 1.8rem;
   color: white;
   padding-top: 2.7rem;
@@ -1866,12 +1873,15 @@ content: "▶";
   margin: 0 10px;
 }
 .opition_card .name {
- font-size: .9rem;
-font-weight: 300;
-letter-spacing: 1.3px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 1.3px;
 }
 
 /* Footer eleven css */
+footer .logo img {
+  height: 140px;
+}
 .footer-eleven {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -1894,6 +1904,11 @@ letter-spacing: 1.3px;
   .footer-eleven .footer-widget {
     margin-top: 40px;
     text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  footer .logo img {
+    height: 100px;
   }
 }
 .footer-eleven .footer-widget h5 {
